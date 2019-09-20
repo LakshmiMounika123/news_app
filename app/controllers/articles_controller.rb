@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
         # @catalog = Catalog.find(params[:catalog_id])
         if params.has_key?('article') and params.keys[0] == @catalog.ctype
 
-            Rails.logger.debug "\n Yes I am in IF Condition #{params.keys[0].inspect} \n"
+            # Rails.logger.debug "\n Yes I am in IF Condition #{params.keys[0].inspect} \n"
 
             @article = @catalog.articles.new(articles_params)
             if @article.save

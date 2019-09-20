@@ -3,7 +3,7 @@ class CreateGalleries < ActiveRecord::Migration[6.0]
     create_table :galleries do |t|
       t.string :title, null: false
       t.string :description
-      t.string :status, default: :created
+      t.integer :status, default: :created
       t.datetime :published_at
       t.references :catalog, null: false, foreign_key: true
 

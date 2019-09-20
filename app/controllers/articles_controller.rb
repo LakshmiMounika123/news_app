@@ -5,9 +5,9 @@ class ArticlesController < ApplicationController
     def index
         # @article = Catalog.find(params[:catalog_id])
 
-        @articles = @catalog.articles
+        @articles = @catalog.articles.all
 
-        render json: {articles: response_data('articles', @articles)}, status: :ok
+        render json: {article: response_data('articles', @articles)}, status: :ok
         # render json: {articles: @articles}  
     end
 

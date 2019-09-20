@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
                               %i[id name ctype]
                             when 'playlists'
                               %i[id name title]
+                            when 'articles'
+                              %i[title short_description long_description status]
                             end
   end
 end

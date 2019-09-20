@@ -5,4 +5,8 @@ class Article < ApplicationRecord
     validates :status, inclusion: { in: %w(created completed published recomposed republished unpublished rejected),
             message: "%{value} is not a valid article_type" }
 
+            # has_many :medias, as: :mediable
+            # has_one :thumbnail, as: :thumbnailable
+            # has_many :comments, as: :commentable
+
 end

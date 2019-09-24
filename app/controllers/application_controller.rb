@@ -19,7 +19,9 @@ class ApplicationController < ActionController::Base
                             when 'playlists'
                               %i[id name title]
                             when 'articles'
-                              %i[title short_description long_description status]
+                              %i[id title short_description long_description status comments_url]
+                            when 'comments'
+                              %i[url]
                             end
   end
 end

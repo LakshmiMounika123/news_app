@@ -7,6 +7,6 @@ class Article < ApplicationRecord
 
             # has_many :medias, as: :mediable
             # has_one :thumbnail, as: :thumbnailable
-            # has_many :comments, as: :commentable
+            has_many :comments, as: :commentable
 
 end

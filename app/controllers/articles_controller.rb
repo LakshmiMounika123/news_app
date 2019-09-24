@@ -55,7 +55,20 @@ class ArticlesController < ApplicationController
         # @catalog = Catalog.find(params[:catalog_id])
         @article = @catalog.articles.find(params[:id])
 
-        render json: {status: "SUCCESS", data: @article}, status: :ok
+        @comment = @article.comments.includes(comments:[:comments])
+        render json: @comment
+
+
+        # @comment = @article.comments.all
+        # comment = {}
+        # comment[:article] = @article
+        # comment[:comments] = response_data('comments', @comment)
+        # render json: comment
+
+
+        # render json: @comment.includes(comments:[:comment])
+
+        # render json: {status: "SUCCESS", data: @article}, status: :ok
     end
 
     private
